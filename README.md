@@ -1,6 +1,6 @@
-# Express.js API Security Essentials
+# Express.js Authorization: Basic API Access Control Sample
 
-This TypeScript code sample demonstrates how to build an Express.js API server that is secure by design.
+This TypeScript code sample demonstrates how to implement authorization in an Express.js API server using Auth0. 
 
 ## Run the Project
 
@@ -15,6 +15,8 @@ Create a `.env` file under the root project directory and populate it with the f
 ```bash
 PORT=6060
 CLIENT_ORIGIN_URL=http://localhost:4040
+AUTH0_AUDIENCE=
+AUTH0_DOMAIN=
 ```
 
 Run the project in development mode:

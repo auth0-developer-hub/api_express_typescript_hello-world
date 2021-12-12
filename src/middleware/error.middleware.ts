@@ -24,6 +24,12 @@ export const errorHandler = (
     return;
   }
 
+  if (error && error.statusCode && error.statusCode === 403) {
+    response.status(error.statusCode).json({ message: "Permission denied" });
+
+    return;
+  }
+
   const status = error.statusCode || error.code || 500;
   const message = error.message || "internal error";
 

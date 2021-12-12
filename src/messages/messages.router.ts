@@ -1,5 +1,7 @@
 import express from "express";
 import { checkJwt } from "../middleware/check-jwt.middleware";
+import { checkPermissions } from "../middleware/check-permissions.middleware";
+import { AdminMessagesPermissions } from "./messages-permissions";
 import {
   getAdminMessage,
   getProtectedMessage,
@@ -20,8 +22,13 @@ messagesRouter.get("/protected", checkJwt, (req, res) => {
   res.status(200).json(message);
 });
 
-messagesRouter.get("/admin", checkJwt, (req, res) => {
-  const message = getAdminMessage();
+messagesRouter.get(
+  "/admin",
+  checkJwt,
+  checkPermissions(AdminMessagesPermissions.Read),
+  (req, res) => {
+    const message = getAdminMessage();
 
-  res.status(200).json(message);
-});
+    res.status(200).json(message);
+  }
+);

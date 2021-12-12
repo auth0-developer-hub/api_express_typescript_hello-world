@@ -1,6 +1,6 @@
-# Express.js Authorization: Basic API Access Control Sample
+# Express.js Authorization: Role-Based Access Control Sample
 
-This TypeScript code sample demonstrates how to implement authorization in an Express.js API server using Auth0. 
+This TypeScript code sample demonstrates how to implement Role-Based Access Control (RBAC) in an Express.js API server using Auth0. 
 
 ## Run the Project
 

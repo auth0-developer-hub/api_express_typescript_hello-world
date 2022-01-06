@@ -4,7 +4,7 @@ export const getPublicMessage = (): Message => {
   return {
     api: "api_express_typescript_hello-world",
     branch: "starter",
-    text: "The starter API doesn't require an access token to share this public message.",
+    text: "No access token required to get this public message.",
   };
 };
 
@@ -12,7 +12,7 @@ export const getProtectedMessage = (): Message => {
   return {
     api: "api_express_typescript_hello-world",
     branch: "starter",
-    text: "The starter API doesn't require an access token to share this protected message.",
+    text: "No access token required to get this protected message.",
   };
 };
 
@@ -20,6 +20,6 @@ export const getAdminMessage = (): Message => {
   return {
     api: "api_express_typescript_hello-world",
     branch: "starter",
-    text: "The starter API doesn't require an access token to share this admin message.",
+    text: "No access token or role required to get this admin message.",
   };
 };

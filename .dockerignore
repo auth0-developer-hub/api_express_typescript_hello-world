@@ -297,3 +297,4 @@ $RECYCLE.BIN/
 Dockerfile
 docker-compose.yml
 README.md
+build/

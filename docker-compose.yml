@@ -2,8 +2,7 @@ version: "3"
 services:
   api:
     build: .
-    image: api_express_typescript_hello-world_basic_authorization
-    container_name: api_express_typescript_hello-world_basic_authorization
+    image: api_express_typescript_hello-world:basic_authorization
     ports:
       - 6060:6060
     env_file:

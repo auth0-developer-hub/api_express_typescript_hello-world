@@ -1,32 +1,13 @@
-# Express.js/TypeScript: Starter API Code Sample
+# Express.js/TypeScript: API Basic Access Control Code Sample
 
-This TypeScript code sample demonstrates how to build an API server using Express.js that is secure by design.
+This TypeScript code sample demonstrates **how to implement authorization** in Express.js API servers using Auth0.
 
-Visit the ["Express.js/TypeScript Code Samples: API Security in Action"](https://auth0.com/developers/hub/code-samples/api/express-typescript) section of the ["Auth0 Developer Hub"](https://auth0.com/developers/hub) to explore how you can secure Express.js applications written in TypeScript by implementing endpoint protection and authorization with Auth0.
+This code sample is part of the ["Auth0 Developer Hub"](https://auth0.com/developers/hub), a place where you can explore the authentication and authorization features of the Auth0 Identity Platform.
 
-[![Express.js/TypeScript Code Samples: API Security in Action](https://cdn.auth0.com/blog/hub/code-samples/api/express-typescript.png)](https://auth0.com/developers/hub/code-samples/api/express-typescript)
+Visit the ["Express.js/TypeScript Code Sample: Authorization For Basic APIs"](https://auth0.com/developers/hub/code-samples/api/express-typescript/basic-authorization) page for instructions on how to configure and run this code sample and how to integrate it with a Single-Page Application (SPA) of your choice.
+
+[![Express.js/TypeScript Code Sample: Authorization For Basic APIs](https://cdn.auth0.com/blog/hub/code-samples/api/express-typescript/basic-authorization.png)](https://auth0.com/developers/hub/code-samples/api/express-typescript/basic-authorization)
 
 ## Why Use Auth0?
 
 Auth0 is a flexible drop-in solution to add authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that come with building your own solution to authenticate and authorize users. We offer tons of guidance and SDKs for you to get started and [integrate Auth0 into your stack easily](https://auth0.com/developers/hub/code-samples/full-stack).
-
-## Set Up and Run the Express.js Project
-
-Install the project dependencies:
-
-```bash
-npm install
-```
-
-Create a `.env` file under the root project directory and populate it with the following environment variables:
-
-```bash
-PORT=6060
-CLIENT_ORIGIN_URL=http://localhost:4040
-```
-
-Run the project in development mode:
-
-```bash
-npm run dev
-```

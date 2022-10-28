@@ -1,4 +1,5 @@
 import express from "express";
+import { validateAccessToken } from "../middleware/auth0.middleware";
 import {
   getAdminMessage,
   getProtectedMessage,
@@ -13,13 +14,13 @@ messagesRouter.get("/public", (req, res) => {
   res.status(200).json(message);
 });
 
-messagesRouter.get("/protected", (req, res) => {
+messagesRouter.get("/protected", validateAccessToken, (req, res) => {
   const message = getProtectedMessage();
 
   res.status(200).json(message);
 });
 
-messagesRouter.get("/admin", (req, res) => {
+messagesRouter.get("/admin", validateAccessToken, (req, res) => {
   const message = getAdminMessage();
 
   res.status(200).json(message);

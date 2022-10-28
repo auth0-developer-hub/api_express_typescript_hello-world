@@ -1,5 +1,9 @@
 import express from "express";
-import { validateAccessToken } from "../middleware/auth0.middleware";
+import {
+  checkRequiredPermissions,
+  validateAccessToken,
+} from "../middleware/auth0.middleware";
+import { AdminMessagesPermissions } from "./messages.permissions";
 import {
   getAdminMessage,
   getProtectedMessage,
@@ -20,8 +24,13 @@ messagesRouter.get("/protected", validateAccessToken, (req, res) => {
   res.status(200).json(message);
 });
 
-messagesRouter.get("/admin", validateAccessToken, (req, res) => {
-  const message = getAdminMessage();
+messagesRouter.get(
+  "/admin",
+  validateAccessToken,
+  checkRequiredPermissions([AdminMessagesPermissions.Read]),
+  (req, res) => {
+    const message = getAdminMessage();
 
-  res.status(200).json(message);
-});
+    res.status(200).json(message);
+  }
+);
